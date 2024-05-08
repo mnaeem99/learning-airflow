@@ -1,0 +1,35 @@
+[2024-03-06T13:20:58.248+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00/task_id=greet permission to 509
+[2024-03-06T13:20:58.251+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00 permission to 509
+[2024-03-06T13:20:58.254+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2 permission to 509
+[2024-03-06T13:20:58.257+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs permission to 509
+[2024-03-06T13:20:58.260+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial permission to 509
+[2024-03-06T13:20:58.262+0500] {logging_mixin.py:188} INFO - Changing /mnt/c permission to 509
+[2024-03-06T13:20:58.263+0500] {logging_mixin.py:188} INFO - Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[2024-03-06T13:20:58.337+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00/task_id=greet permission to 509
+[2024-03-06T13:20:58.341+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00 permission to 509
+[2024-03-06T13:20:58.343+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2 permission to 509
+[2024-03-06T13:20:58.345+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs permission to 509
+[2024-03-06T13:20:58.347+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial permission to 509
+[2024-03-06T13:20:58.348+0500] {logging_mixin.py:188} INFO - Changing /mnt/c permission to 509
+[2024-03-06T13:20:58.349+0500] {logging_mixin.py:188} INFO - Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[2024-03-06T13:20:58.395+0500] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: task_flow_api_dag_v2.greet manual__2024-03-06T08:20:48.571810+00:00 [queued]>
+[2024-03-06T13:20:58.416+0500] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: task_flow_api_dag_v2.greet manual__2024-03-06T08:20:48.571810+00:00 [queued]>
+[2024-03-06T13:20:58.417+0500] {taskinstance.py:2193} INFO - Starting attempt 1 of 6
+[2024-03-06T13:20:58.468+0500] {taskinstance.py:2214} INFO - Executing <Task(_PythonDecoratedOperator): greet> on 2024-03-06 08:20:48.571810+00:00
+[2024-03-06T13:20:58.470+0500] {standard_task_runner.py:60} INFO - Started process 1597 to run task
+[2024-03-06T13:20:58.474+0500] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'greet', 'manual__2024-03-06T08:20:48.571810+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py', '--cfg-path', '/tmp/tmp6lzzrv73']
+[2024-03-06T13:20:58.476+0500] {standard_task_runner.py:88} INFO - Job 29: Subtask greet
+[2024-03-06T13:20:58.579+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00/task_id=greet permission to 509
+[2024-03-06T13:20:58.581+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2/run_id=manual__2024-03-06T08:20:48.571810+00:00 permission to 509
+[2024-03-06T13:20:58.583+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs/dag_id=task_flow_api_dag_v2 permission to 509
+[2024-03-06T13:20:58.585+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial/logs permission to 509
+[2024-03-06T13:20:58.587+0500] {logging_mixin.py:188} INFO - Changing /mnt/c/airflow_tutorial permission to 509
+[2024-03-06T13:20:58.589+0500] {logging_mixin.py:188} INFO - Changing /mnt/c permission to 509
+[2024-03-06T13:20:58.590+0500] {logging_mixin.py:188} INFO - Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[2024-03-06T13:20:58.592+0500] {task_command.py:423} INFO - Running <TaskInstance: task_flow_api_dag_v2.greet manual__2024-03-06T08:20:48.571810+00:00 [running]> on host DESKTOP-QMFTH9M.
+[2024-03-06T13:20:58.804+0500] {taskinstance.py:2510} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='naeem' AIRFLOW_CTX_DAG_ID='task_flow_api_dag_v2' AIRFLOW_CTX_TASK_ID='greet' AIRFLOW_CTX_EXECUTION_DATE='2024-03-06T08:20:48.571810+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-03-06T08:20:48.571810+00:00'
+[2024-03-06T13:20:58.806+0500] {logging_mixin.py:188} INFO - Hi, My name is M.  Naeem, and I am 25 years old...
+[2024-03-06T13:20:58.807+0500] {python.py:202} INFO - Done. Returned value was: None
+[2024-03-06T13:20:58.822+0500] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=task_flow_api_dag_v2, task_id=greet, execution_date=20240306T082048, start_date=20240306T082058, end_date=20240306T082058
+[2024-03-06T13:20:58.887+0500] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-03-06T13:20:58.915+0500] {taskinstance.py:3309} INFO - 0 downstream tasks scheduled from follow-on schedule check

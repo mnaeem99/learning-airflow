@@ -1,0 +1,588 @@
+[[34m2024-03-06T15:39:19.749+0500[0m] {[34mtask_context_logger.py:[0m63} INFO[0m - Task context logging is enabled[0m
+[[34m2024-03-06T15:39:19.751+0500[0m] {[34mexecutor_loader.py:[0m115} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2024-03-06T15:39:19.819+0500[0m] {[34mscheduler_job_runner.py:[0m808} INFO[0m - Starting the scheduler[0m
+[[34m2024-03-06T15:39:19.821+0500[0m] {[34mscheduler_job_runner.py:[0m815} INFO[0m - Processing each file at most -1 times[0m
+[[34m2024-03-06T15:39:19.828+0500[0m] {[34mmanager.py:[0m169} INFO[0m - Launched DagFileProcessorManager with pid: 5526[0m
+[[34m2024-03-06T15:39:19.831+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T15:39:19.836+0500[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone UTC[0m
+[[34m2024-03-06T15:39:19.870+0500[0m] {[34mscheduler_job_runner.py:[0m1631} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[2024-03-06T15:39:19.882+0500] {manager.py:392} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2024-03-06T15:40:17.603+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:40:17.605+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:40:17.607+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:40:17.626+0500[0m] {[34mtaskinstance.py:[0m2283} WARNING[0m - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved[0m
+[[34m2024-03-06T15:40:17.627+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:40:17.628+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:40:17.647+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:40:19.428+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:40:19.823+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:40:21.161+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-06T15:40:21.197+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:40:20.004195+00:00, run_end_date=2024-03-06 10:40:20.564934+00:00, run_duration=0.560739, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=31, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:40:17.609492+00:00, queued_by_job_id=30, pid=5650[0m
+[[34m2024-03-06T15:42:21.115+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:42:21.116+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:42:21.117+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:42:21.129+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:42:21.130+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:42:21.147+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:42:22.238+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:42:22.535+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:42:23.662+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=2, map_index=-1)[0m
+[[34m2024-03-06T15:42:23.693+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:42:22.701907+00:00, run_end_date=2024-03-06 10:42:23.124277+00:00, run_duration=0.42237, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=32, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:42:21.119109+00:00, queued_by_job_id=30, pid=5852[0m
+[[34m2024-03-06T15:44:20.676+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T15:44:23.775+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:44:23.776+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:44:23.777+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:44:23.788+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:44:23.789+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:44:23.802+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:44:24.952+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:44:25.239+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:44:26.290+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=3, map_index=-1)[0m
+[[34m2024-03-06T15:44:26.319+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:44:25.392893+00:00, run_end_date=2024-03-06 10:44:25.768158+00:00, run_duration=0.375265, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=33, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:44:23.778522+00:00, queued_by_job_id=30, pid=6069[0m
+[[34m2024-03-06T15:46:26.527+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:46:26.528+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:46:26.529+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:46:26.541+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:46:26.542+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:46:26.558+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:46:27.756+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:46:28.049+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:46:29.101+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=4, map_index=-1)[0m
+[[34m2024-03-06T15:46:29.130+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:46:28.189491+00:00, run_end_date=2024-03-06 10:46:28.551056+00:00, run_duration=0.361565, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:46:26.530678+00:00, queued_by_job_id=30, pid=6282[0m
+[[34m2024-03-06T15:48:30.403+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:48:30.404+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:48:30.405+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:48:30.421+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:48:30.422+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:48:30.444+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:48:31.937+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:48:32.317+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:48:33.632+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=5, map_index=-1)[0m
+[[34m2024-03-06T15:48:33.658+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:48:32.515099+00:00, run_end_date=2024-03-06 10:48:32.972842+00:00, run_duration=0.457743, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=35, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:48:30.406305+00:00, queued_by_job_id=30, pid=6510[0m
+[[34m2024-03-06T15:49:21.335+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T15:50:33.670+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:50:33.671+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T15:50:33.672+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>[0m
+[[34m2024-03-06T15:50:33.686+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T15:50:33.688+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:50:33.706+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T15:50:35.171+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T10:40:15.407792+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T15:50:35.562+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T15:50:36.910+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=6, map_index=-1)[0m
+[[34m2024-03-06T15:50:36.934+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:50:35.756138+00:00, run_end_date=2024-03-06 10:50:36.263202+00:00, run_duration=0.507064, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=36, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:50:33.674360+00:00, queued_by_job_id=30, pid=6714[0m
+[[34m2024-03-06T15:50:37.599+0500[0m] {[34mdagrun.py:[0m774} ERROR[0m - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 10:40:15.407792+00:00: manual__2024-03-06T10:40:15.407792+00:00, state:running, queued_at: 2024-03-06 10:40:15.509467+00:00. externally triggered: True> failed[0m
+[[34m2024-03-06T15:50:37.601+0500[0m] {[34mdagrun.py:[0m846} INFO[0m - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 10:40:15.407792+00:00, run_id=manual__2024-03-06T10:40:15.407792+00:00, run_start_date=2024-03-06 10:40:17.299288+00:00, run_end_date=2024-03-06 10:50:37.601284+00:00, run_duration=620.301996, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571[0m
+[[34m2024-03-06T15:54:21.618+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T15:59:21.971+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:01:02.071+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:01:02.072+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:01:02.074+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:01:02.113+0500[0m] {[34mtaskinstance.py:[0m2283} WARNING[0m - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved[0m
+[[34m2024-03-06T16:01:02.114+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:01:02.115+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:01:02.133+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:01:03.822+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:01:04.238+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:01:05.348+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-06T16:01:05.377+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:01:04.388737+00:00, run_end_date=2024-03-06 11:01:04.768448+00:00, run_duration=0.379711, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=37, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:01:02.076233+00:00, queued_by_job_id=30, pid=7640[0m
+[[34m2024-03-06T16:03:05.113+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:03:05.114+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:03:05.115+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:03:05.127+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:03:05.128+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:03:05.141+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:03:06.292+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:03:06.580+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:03:07.668+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=2, map_index=-1)[0m
+[[34m2024-03-06T16:03:07.693+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:03:06.725139+00:00, run_end_date=2024-03-06 11:03:07.062358+00:00, run_duration=0.337219, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=38, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:03:05.116558+00:00, queued_by_job_id=30, pid=7781[0m
+[[34m2024-03-06T16:04:22.289+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:05:07.555+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:05:07.557+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:05:07.558+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:05:07.569+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:05:07.570+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:05:07.587+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:05:08.685+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:05:08.978+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:05:10.018+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=3, map_index=-1)[0m
+[[34m2024-03-06T16:05:10.039+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:05:09.113242+00:00, run_end_date=2024-03-06 11:05:09.457490+00:00, run_duration=0.344248, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=39, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:05:07.559644+00:00, queued_by_job_id=30, pid=7924[0m
+[[34m2024-03-06T16:07:10.258+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:07:10.259+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:07:10.260+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:07:10.275+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:07:10.276+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:07:10.293+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:07:11.803+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:07:12.166+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:07:13.301+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=4, map_index=-1)[0m
+[[34m2024-03-06T16:07:13.326+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:07:12.328034+00:00, run_end_date=2024-03-06 11:07:12.717507+00:00, run_duration=0.389473, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=40, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:07:10.262272+00:00, queued_by_job_id=30, pid=8068[0m
+[[34m2024-03-06T16:09:12.978+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:09:12.979+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:09:12.980+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:09:13.038+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:09:13.040+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:09:13.061+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:09:14.761+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:09:15.148+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:09:16.559+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=5, map_index=-1)[0m
+[[34m2024-03-06T16:09:16.586+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:09:15.328734+00:00, run_end_date=2024-03-06 11:09:15.866337+00:00, run_duration=0.537603, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=41, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:09:12.983013+00:00, queued_by_job_id=30, pid=8217[0m
+[[34m2024-03-06T16:09:23.136+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:11:16.097+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:11:16.098+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:11:16.099+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:11:16.112+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:11:16.112+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:11:16.125+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:11:17.227+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:01:00.377611+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:11:17.508+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:11:18.554+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=6, map_index=-1)[0m
+[[34m2024-03-06T16:11:18.580+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:11:17.646322+00:00, run_end_date=2024-03-06 11:11:17.991301+00:00, run_duration=0.344979, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=42, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:11:16.101083+00:00, queued_by_job_id=30, pid=8356[0m
+[[34m2024-03-06T16:11:18.745+0500[0m] {[34mdagrun.py:[0m774} ERROR[0m - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:01:00.377611+00:00: manual__2024-03-06T11:01:00.377611+00:00, state:running, queued_at: 2024-03-06 11:01:00.430566+00:00. externally triggered: True> failed[0m
+[[34m2024-03-06T16:11:18.746+0500[0m] {[34mdagrun.py:[0m846} INFO[0m - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:01:00.377611+00:00, run_id=manual__2024-03-06T11:01:00.377611+00:00, run_start_date=2024-03-06 11:01:01.935114+00:00, run_end_date=2024-03-06 11:11:18.746556+00:00, run_duration=616.811442, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571[0m
+[[34m2024-03-06T16:14:23.296+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:19:12.450+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:19:12.451+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:19:12.452+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:19:12.465+0500[0m] {[34mtaskinstance.py:[0m2283} WARNING[0m - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved[0m
+[[34m2024-03-06T16:19:12.467+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:19:12.468+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:19:12.484+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:19:14.053+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:19:14.412+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:19:15.724+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-06T16:19:15.751+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:19:14.583368+00:00, run_end_date=2024-03-06 11:19:15.123825+00:00, run_duration=0.540457, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=43, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:19:12.453754+00:00, queued_by_job_id=30, pid=8907[0m
+[[34m2024-03-06T16:19:23.631+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:21:15.602+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:21:15.603+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:21:15.604+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:21:15.615+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:21:15.616+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:21:15.629+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:21:16.793+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:21:17.099+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:21:18.141+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=2, map_index=-1)[0m
+[[34m2024-03-06T16:21:18.167+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:21:17.246996+00:00, run_end_date=2024-03-06 11:21:17.611040+00:00, run_duration=0.364044, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=44, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:21:15.605660+00:00, queued_by_job_id=30, pid=9047[0m
+[[34m2024-03-06T16:23:17.928+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:23:17.929+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:23:17.930+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:23:17.943+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:23:17.943+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:23:17.956+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:23:19.077+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:23:19.388+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:23:20.491+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=3, map_index=-1)[0m
+[[34m2024-03-06T16:23:20.517+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:23:19.529074+00:00, run_end_date=2024-03-06 11:23:19.898059+00:00, run_duration=0.368985, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=45, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:23:17.932055+00:00, queued_by_job_id=30, pid=9195[0m
+[[34m2024-03-06T16:24:24.011+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:25:21.264+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:25:21.265+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:25:21.266+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:25:21.277+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:25:21.278+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:25:21.291+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:25:22.399+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:25:22.710+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:25:23.778+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=4, map_index=-1)[0m
+[[34m2024-03-06T16:25:23.804+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:25:22.854503+00:00, run_end_date=2024-03-06 11:25:23.202979+00:00, run_duration=0.348476, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=46, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:25:21.267456+00:00, queued_by_job_id=30, pid=9335[0m
+[[34m2024-03-06T16:27:23.324+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:27:23.325+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:27:23.326+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:27:23.336+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:27:23.337+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:27:23.352+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:27:24.474+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:27:24.830+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:27:25.904+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=5, map_index=-1)[0m
+[[34m2024-03-06T16:27:25.930+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:27:24.974454+00:00, run_end_date=2024-03-06 11:27:25.327812+00:00, run_duration=0.353358, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=47, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:27:23.327499+00:00, queued_by_job_id=30, pid=9477[0m
+[[34m2024-03-06T16:29:24.455+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:29:25.741+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:29:25.742+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:29:25.744+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:29:25.760+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:29:25.762+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:29:25.779+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:29:27.046+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:29:27.361+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:29:28.499+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=6, map_index=-1)[0m
+[[34m2024-03-06T16:29:28.526+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:29:27.518580+00:00, run_end_date=2024-03-06 11:29:27.881605+00:00, run_duration=0.363025, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=48, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:29:25.745817+00:00, queued_by_job_id=30, pid=9634[0m
+[[34m2024-03-06T16:29:28.703+0500[0m] {[34mdagrun.py:[0m774} ERROR[0m - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:19:10.805645+00:00: manual__2024-03-06T11:19:10.805645+00:00, state:running, queued_at: 2024-03-06 11:19:10.848923+00:00. externally triggered: True> failed[0m
+[[34m2024-03-06T16:29:28.704+0500[0m] {[34mdagrun.py:[0m846} INFO[0m - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:19:10.805645+00:00, run_id=manual__2024-03-06T11:19:10.805645+00:00, run_start_date=2024-03-06 11:19:12.185767+00:00, run_end_date=2024-03-06 11:29:28.704558+00:00, run_duration=616.518791, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571[0m
+[[34m2024-03-06T16:31:05.925+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:31:05.926+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:31:05.927+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:31:05.941+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=7, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:31:05.942+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:31:05.955+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:31:07.239+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:31:07.544+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:31:08.698+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=7, map_index=-1)[0m
+[[34m2024-03-06T16:31:08.723+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:31:07.688300+00:00, run_end_date=2024-03-06 11:31:08.073983+00:00, run_duration=0.385683, state=up_for_retry, executor_state=success, try_number=7, max_tries=11, job_id=49, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:31:05.928661+00:00, queued_by_job_id=30, pid=9753[0m
+[[34m2024-03-06T16:33:08.551+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:33:08.553+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:33:08.554+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:33:08.565+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=8, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:33:08.566+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:33:08.578+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:33:09.687+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:33:09.975+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:33:11.121+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=8, map_index=-1)[0m
+[[34m2024-03-06T16:33:11.143+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:33:10.113160+00:00, run_end_date=2024-03-06 11:33:10.471850+00:00, run_duration=0.35869, state=up_for_retry, executor_state=success, try_number=8, max_tries=11, job_id=50, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:33:08.555513+00:00, queued_by_job_id=30, pid=9900[0m
+[[34m2024-03-06T16:34:25.221+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:35:11.412+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:35:11.414+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:35:11.415+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:35:11.432+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=9, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:35:11.434+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:35:11.451+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:35:13.028+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:35:13.397+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:35:14.736+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=9, map_index=-1)[0m
+[[34m2024-03-06T16:35:14.798+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:35:13.552095+00:00, run_end_date=2024-03-06 11:35:13.949206+00:00, run_duration=0.397111, state=up_for_retry, executor_state=success, try_number=9, max_tries=11, job_id=51, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:35:11.417437+00:00, queued_by_job_id=30, pid=10047[0m
+[[34m2024-03-06T16:37:14.457+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:37:14.458+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:37:14.459+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:37:14.472+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=10, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:37:14.473+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:37:14.489+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:37:15.801+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:37:16.140+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:37:17.377+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=10, map_index=-1)[0m
+[[34m2024-03-06T16:37:17.404+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:37:16.303496+00:00, run_end_date=2024-03-06 11:37:16.749407+00:00, run_duration=0.445911, state=up_for_retry, executor_state=success, try_number=10, max_tries=11, job_id=52, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:37:14.461177+00:00, queued_by_job_id=30, pid=10185[0m
+[[34m2024-03-06T16:39:17.335+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:39:17.337+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:39:17.337+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:39:17.350+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=11, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:39:17.351+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:39:17.363+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:39:18.532+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:39:18.836+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:39:19.885+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=11, map_index=-1)[0m
+[[34m2024-03-06T16:39:19.910+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:39:18.983869+00:00, run_end_date=2024-03-06 11:39:19.345096+00:00, run_duration=0.361227, state=up_for_retry, executor_state=success, try_number=11, max_tries=11, job_id=53, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:39:17.339191+00:00, queued_by_job_id=30, pid=10323[0m
+[[34m2024-03-06T16:39:25.591+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:41:20.137+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:41:20.138+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:41:20.139+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:41:20.150+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=12, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:41:20.151+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:41:20.168+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:41:21.325+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:19:10.805645+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:41:21.628+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:41:22.700+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=12, map_index=-1)[0m
+[[34m2024-03-06T16:41:22.725+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:41:21.768759+00:00, run_end_date=2024-03-06 11:41:22.125597+00:00, run_duration=0.356838, state=failed, executor_state=success, try_number=12, max_tries=11, job_id=54, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:41:20.140349+00:00, queued_by_job_id=30, pid=10466[0m
+[[34m2024-03-06T16:41:22.888+0500[0m] {[34mdagrun.py:[0m774} ERROR[0m - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:19:10.805645+00:00: manual__2024-03-06T11:19:10.805645+00:00, state:running, queued_at: 2024-03-06 11:31:04.866074+00:00. externally triggered: True> failed[0m
+[[34m2024-03-06T16:41:22.889+0500[0m] {[34mdagrun.py:[0m846} INFO[0m - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:19:10.805645+00:00, run_id=manual__2024-03-06T11:19:10.805645+00:00, run_start_date=2024-03-06 11:31:05.811645+00:00, run_end_date=2024-03-06 11:41:22.889061+00:00, run_duration=617.077416, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571[0m
+[[34m2024-03-06T16:44:25.906+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:49:26.215+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:52:01.418+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:52:01.420+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:52:01.421+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:52:01.443+0500[0m] {[34mtaskinstance.py:[0m2283} WARNING[0m - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved[0m
+[[34m2024-03-06T16:52:01.445+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:52:01.447+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:52:01.469+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:52:03.020+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:52:03.409+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:52:04.532+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-03-06T16:52:04.560+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:52:03.589665+00:00, run_end_date=2024-03-06 11:52:03.994490+00:00, run_duration=0.404825, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=55, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:52:01.423889+00:00, queued_by_job_id=30, pid=11208[0m
+[[34m2024-03-06T16:54:04.749+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:54:04.751+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:54:04.751+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:54:04.761+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:54:04.762+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:54:04.776+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:54:05.946+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:54:06.242+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:54:07.291+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=2, map_index=-1)[0m
+[[34m2024-03-06T16:54:07.316+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:54:06.390078+00:00, run_end_date=2024-03-06 11:54:06.743152+00:00, run_duration=0.353074, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=56, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:54:04.752876+00:00, queued_by_job_id=30, pid=11356[0m
+[[34m2024-03-06T16:54:26.617+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T16:56:07.802+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:56:07.803+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:56:07.804+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:56:07.818+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:56:07.819+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:56:07.834+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:56:09.083+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:56:09.404+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:56:10.549+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=3, map_index=-1)[0m
+[[34m2024-03-06T16:56:10.578+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:56:09.573757+00:00, run_end_date=2024-03-06 11:56:09.936207+00:00, run_duration=0.36245, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=57, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:56:07.806595+00:00, queued_by_job_id=30, pid=11494[0m
+[[34m2024-03-06T16:58:10.146+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:58:10.148+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T16:58:10.149+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T16:58:10.163+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T16:58:10.164+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:58:10.181+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T16:58:11.564+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T16:58:12.001+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T16:58:13.451+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=4, map_index=-1)[0m
+[[34m2024-03-06T16:58:13.475+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:58:12.206768+00:00, run_end_date=2024-03-06 11:58:12.735510+00:00, run_duration=0.528742, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=58, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:58:10.150763+00:00, queued_by_job_id=30, pid=11628[0m
+[[34m2024-03-06T16:59:27.332+0500[0m] {[34mscheduler_job_runner.py:[0m1608} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-03-06T17:00:13.359+0500[0m] {[34mscheduler_job_runner.py:[0m424} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T17:00:13.359+0500[0m] {[34mscheduler_job_runner.py:[0m487} INFO[0m - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks[0m
+[[34m2024-03-06T17:00:13.360+0500[0m] {[34mscheduler_job_runner.py:[0m603} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>[0m
+[[34m2024-03-06T17:00:13.370+0500[0m] {[34mscheduler_job_runner.py:[0m646} INFO[0m - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-03-06T17:00:13.371+0500[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T17:00:13.383+0500[0m] {[34msequential_executor.py:[0m73} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py'][0m
+[[34m2024-03-06T17:00:14.425+0500[0m] {[34mdagbag.py:[0m540} INFO[0m - Filling up the DagBag from /mnt/c/airflow_tutorial/dags/postgres_operator_dag.py[0m
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00/task_id=create_table_user permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1/run_id=manual__2024-03-06T11:51:59.569526+00:00 permission to 509
+Changing /mnt/c/airflow_tutorial/logs/dag_id=postgres_operator_dag_v_1 permission to 509
+Changing /mnt/c/airflow_tutorial/logs permission to 509
+Changing /mnt/c/airflow_tutorial permission to 509
+Changing /mnt/c permission to 509
+Failed to change /mnt/c permission to 509: [Errno 13] Permission denied: '/mnt/c'
+[[34m2024-03-06T17:00:14.729+0500[0m] {[34mtask_command.py:[0m423} INFO[0m - Running <TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [queued]> on host DESKTOP-QMFTH9M.[0m
+[[34m2024-03-06T17:00:15.826+0500[0m] {[34mscheduler_job_runner.py:[0m696} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=5, map_index=-1)[0m
+[[34m2024-03-06T17:00:15.852+0500[0m] {[34mscheduler_job_runner.py:[0m733} INFO[0m - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 12:00:14.876909+00:00, run_end_date=2024-03-06 12:00:15.261374+00:00, run_duration=0.384465, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=59, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 12:00:13.361716+00:00, queued_by_job_id=30, pid=11764[0m

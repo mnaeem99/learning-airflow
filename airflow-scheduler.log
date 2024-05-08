@@ -1,0 +1,616 @@
+2024-03-06 12:25:01,662 INFO - Task context logging is enabled
+2024-03-06 12:25:01,664 INFO - Loaded executor: SequentialExecutor
+2024-03-06 12:25:01,723 INFO - Starting the scheduler
+2024-03-06 12:25:01,724 INFO - Processing each file at most -1 times
+2024-03-06 12:25:01,731 INFO - Launched DagFileProcessorManager with pid: 898
+2024-03-06 12:25:01,733 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:25:01,738 INFO - Configured default timezone UTC
+2024-03-06 12:25:01,765 INFO - Marked 2 SchedulerJob instances as failed
+2024-03-06 12:25:02,489 INFO - 2 tasks up for execution:
+	<TaskInstance: my_first_dag_v_2.first_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.first_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+2024-03-06 12:25:02,491 INFO - DAG my_first_dag_v_2 has 0/16 running and queued tasks
+2024-03-06 12:25:02,492 INFO - DAG my_first_dag_v_2 has 1/16 running and queued tasks
+2024-03-06 12:25:02,492 INFO - Setting the following tasks to queued state:
+	<TaskInstance: my_first_dag_v_2.first_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.first_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+2024-03-06 12:25:02,504 WARNING - cannot record scheduled_duration for task first_task because previous state change time has not been saved
+2024-03-06 12:25:02,505 WARNING - cannot record scheduled_duration for task first_task because previous state change time has not been saved
+2024-03-06 12:25:02,506 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-03-06 12:25:02,507 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'first_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:02,508 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-03-06 12:25:02,508 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'first_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:02,519 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'first_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:04,653 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'first_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:06,840 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:06,842 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:06,869 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=first_task, run_id=manual__2024-03-06T05:48:30.560152+00:00, map_index=-1, run_start_date=2024-03-06 07:25:03.832475+00:00, run_end_date=2024-03-06 07:25:04.178908+00:00, run_duration=0.346433, state=success, executor_state=success, try_number=1, max_tries=5, job_id=7, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-03-06 07:25:02.494060+00:00, queued_by_job_id=6, pid=902
+2024-03-06 12:25:06,871 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=first_task, run_id=manual__2024-03-06T07:09:10.753409+00:00, map_index=-1, run_start_date=2024-03-06 07:25:05.979881+00:00, run_end_date=2024-03-06 07:25:06.315683+00:00, run_duration=0.335802, state=success, executor_state=success, try_number=1, max_tries=5, job_id=8, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2024-03-06 07:25:02.494060+00:00, queued_by_job_id=6, pid=905
+2024-03-06 12:25:07,452 INFO - 4 tasks up for execution:
+	<TaskInstance: my_first_dag_v_2.second_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.third_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.second_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.third_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+2024-03-06 12:25:07,453 INFO - DAG my_first_dag_v_2 has 0/16 running and queued tasks
+2024-03-06 12:25:07,454 INFO - DAG my_first_dag_v_2 has 1/16 running and queued tasks
+2024-03-06 12:25:07,454 INFO - DAG my_first_dag_v_2 has 2/16 running and queued tasks
+2024-03-06 12:25:07,455 INFO - DAG my_first_dag_v_2 has 3/16 running and queued tasks
+2024-03-06 12:25:07,456 INFO - Setting the following tasks to queued state:
+	<TaskInstance: my_first_dag_v_2.second_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.third_task manual__2024-03-06T05:48:30.560152+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.second_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+	<TaskInstance: my_first_dag_v_2.third_task manual__2024-03-06T07:09:10.753409+00:00 [scheduled]>
+2024-03-06 12:25:07,466 WARNING - cannot record scheduled_duration for task second_task because previous state change time has not been saved
+2024-03-06 12:25:07,467 WARNING - cannot record scheduled_duration for task third_task because previous state change time has not been saved
+2024-03-06 12:25:07,468 WARNING - cannot record scheduled_duration for task second_task because previous state change time has not been saved
+2024-03-06 12:25:07,468 WARNING - cannot record scheduled_duration for task third_task because previous state change time has not been saved
+2024-03-06 12:25:07,469 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='second_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:25:07,470 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'second_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:07,470 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='third_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:25:07,471 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'third_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:07,471 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='second_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:25:07,472 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'second_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:07,473 INFO - Sending TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='third_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:25:07,473 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'third_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:07,486 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'second_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:09,585 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'third_task', 'manual__2024-03-06T05:48:30.560152+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:11,714 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'second_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:13,997 INFO - Executing command: ['airflow', 'tasks', 'run', 'my_first_dag_v_2', 'third_task', 'manual__2024-03-06T07:09:10.753409+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_first_dag.py']
+2024-03-06 12:25:16,298 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='second_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:16,299 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='third_task', run_id='manual__2024-03-06T05:48:30.560152+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:16,300 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='second_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:16,301 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='my_first_dag_v_2', task_id='third_task', run_id='manual__2024-03-06T07:09:10.753409+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:16,325 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=second_task, run_id=manual__2024-03-06T07:09:10.753409+00:00, map_index=-1, run_start_date=2024-03-06 07:25:13.192381+00:00, run_end_date=2024-03-06 07:25:13.504150+00:00, run_duration=0.311769, state=success, executor_state=success, try_number=1, max_tries=5, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-06 07:25:07.457031+00:00, queued_by_job_id=6, pid=917
+2024-03-06 12:25:16,327 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=third_task, run_id=manual__2024-03-06T07:09:10.753409+00:00, map_index=-1, run_start_date=2024-03-06 07:25:15.463938+00:00, run_end_date=2024-03-06 07:25:15.796415+00:00, run_duration=0.332477, state=success, executor_state=success, try_number=1, max_tries=5, job_id=12, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-06 07:25:07.457031+00:00, queued_by_job_id=6, pid=921
+2024-03-06 12:25:16,328 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=second_task, run_id=manual__2024-03-06T05:48:30.560152+00:00, map_index=-1, run_start_date=2024-03-06 07:25:08.784149+00:00, run_end_date=2024-03-06 07:25:09.121926+00:00, run_duration=0.337777, state=success, executor_state=success, try_number=1, max_tries=5, job_id=9, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-06 07:25:07.457031+00:00, queued_by_job_id=6, pid=909
+2024-03-06 12:25:16,329 INFO - TaskInstance Finished: dag_id=my_first_dag_v_2, task_id=third_task, run_id=manual__2024-03-06T05:48:30.560152+00:00, map_index=-1, run_start_date=2024-03-06 07:25:10.939314+00:00, run_end_date=2024-03-06 07:25:11.294115+00:00, run_duration=0.354801, state=success, executor_state=success, try_number=1, max_tries=5, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-03-06 07:25:07.457031+00:00, queued_by_job_id=6, pid=913
+2024-03-06 12:25:16,860 INFO - Marking run <DagRun my_first_dag_v_2 @ 2024-03-06 05:48:30.560152+00:00: manual__2024-03-06T05:48:30.560152+00:00, state:running, queued_at: 2024-03-06 05:48:30.611109+00:00. externally triggered: True> successful
+2024-03-06 12:25:16,861 INFO - DagRun Finished: dag_id=my_first_dag_v_2, execution_date=2024-03-06 05:48:30.560152+00:00, run_id=manual__2024-03-06T05:48:30.560152+00:00, run_start_date=2024-03-06 07:25:02.359413+00:00, run_end_date=2024-03-06 07:25:16.861850+00:00, run_duration=14.502437, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=d9ad5e5f6fcb3e305ad831b17d6a820f
+2024-03-06 12:25:16,873 INFO - Marking run <DagRun my_first_dag_v_2 @ 2024-03-06 07:09:10.753409+00:00: manual__2024-03-06T07:09:10.753409+00:00, state:running, queued_at: 2024-03-06 07:09:10.797238+00:00. externally triggered: True> successful
+2024-03-06 12:25:16,874 INFO - DagRun Finished: dag_id=my_first_dag_v_2, execution_date=2024-03-06 07:09:10.753409+00:00, run_id=manual__2024-03-06T07:09:10.753409+00:00, run_start_date=2024-03-06 07:25:02.359503+00:00, run_end_date=2024-03-06 07:25:16.874750+00:00, run_duration=14.515247, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=d9ad5e5f6fcb3e305ad831b17d6a820f
+2024-03-06 12:25:48,610 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_2.first_task manual__2024-03-06T07:25:47.156048+00:00 [scheduled]>
+2024-03-06 12:25:48,611 INFO - DAG python_operator_dag_v_2 has 0/16 running and queued tasks
+2024-03-06 12:25:48,612 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_2.first_task manual__2024-03-06T07:25:47.156048+00:00 [scheduled]>
+2024-03-06 12:25:48,622 WARNING - cannot record scheduled_duration for task first_task because previous state change time has not been saved
+2024-03-06 12:25:48,623 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T07:25:47.156048+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:25:48,624 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_2', 'first_task', 'manual__2024-03-06T07:25:47.156048+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:25:48,640 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_2', 'first_task', 'manual__2024-03-06T07:25:47.156048+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:25:51,369 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_2', task_id='first_task', run_id='manual__2024-03-06T07:25:47.156048+00:00', try_number=1, map_index=-1)
+2024-03-06 12:25:51,494 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_2, task_id=first_task, run_id=manual__2024-03-06T07:25:47.156048+00:00, map_index=-1, run_start_date=2024-03-06 07:25:50.488470+00:00, run_end_date=2024-03-06 07:25:50.871613+00:00, run_duration=0.383143, state=success, executor_state=success, try_number=1, max_tries=5, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:25:48.613076+00:00, queued_by_job_id=6, pid=941
+2024-03-06 12:25:51,592 INFO - Marking run <DagRun python_operator_dag_v_2 @ 2024-03-06 07:25:47.156048+00:00: manual__2024-03-06T07:25:47.156048+00:00, state:running, queued_at: 2024-03-06 07:25:47.202333+00:00. externally triggered: True> successful
+2024-03-06 12:25:51,593 INFO - DagRun Finished: dag_id=python_operator_dag_v_2, execution_date=2024-03-06 07:25:47.156048+00:00, run_id=manual__2024-03-06T07:25:47.156048+00:00, run_start_date=2024-03-06 07:25:48.495591+00:00, run_end_date=2024-03-06 07:25:51.593417+00:00, run_duration=3.097826, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=2ed8cf949a7986e5b26d3b5cfa965c78
+2024-03-06 12:30:02,064 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:30:28,555 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_3.first_task manual__2024-03-06T07:30:27.042261+00:00 [scheduled]>
+2024-03-06 12:30:28,556 INFO - DAG python_operator_dag_v_3 has 0/16 running and queued tasks
+2024-03-06 12:30:28,559 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_3.first_task manual__2024-03-06T07:30:27.042261+00:00 [scheduled]>
+2024-03-06 12:30:28,610 WARNING - cannot record scheduled_duration for task first_task because previous state change time has not been saved
+2024-03-06 12:30:28,612 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_3', task_id='first_task', run_id='manual__2024-03-06T07:30:27.042261+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:30:28,613 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_3', 'first_task', 'manual__2024-03-06T07:30:27.042261+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:30:28,632 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_3', 'first_task', 'manual__2024-03-06T07:30:27.042261+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:30:32,083 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_3', task_id='first_task', run_id='manual__2024-03-06T07:30:27.042261+00:00', try_number=1, map_index=-1)
+2024-03-06 12:30:32,107 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_3, task_id=first_task, run_id=manual__2024-03-06T07:30:27.042261+00:00, map_index=-1, run_start_date=2024-03-06 07:30:31.158120+00:00, run_end_date=2024-03-06 07:30:31.554818+00:00, run_duration=0.396698, state=success, executor_state=success, try_number=1, max_tries=5, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:30:28.560989+00:00, queued_by_job_id=6, pid=998
+2024-03-06 12:30:32,289 INFO - Marking run <DagRun python_operator_dag_v_3 @ 2024-03-06 07:30:27.042261+00:00: manual__2024-03-06T07:30:27.042261+00:00, state:running, queued_at: 2024-03-06 07:30:27.126286+00:00. externally triggered: True> successful
+2024-03-06 12:30:32,290 INFO - DagRun Finished: dag_id=python_operator_dag_v_3, execution_date=2024-03-06 07:30:27.042261+00:00, run_id=manual__2024-03-06T07:30:27.042261+00:00, run_start_date=2024-03-06 07:30:28.423108+00:00, run_end_date=2024-03-06 07:30:32.290718+00:00, run_duration=3.86761, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=118653f4a109aac1fe63ad7376011975
+2024-03-06 12:35:02,319 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:38:35,840 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_4.get_name manual__2024-03-06T07:38:34.361317+00:00 [scheduled]>
+2024-03-06 12:38:35,841 INFO - DAG python_operator_dag_v_4 has 0/16 running and queued tasks
+2024-03-06 12:38:35,842 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_4.get_name manual__2024-03-06T07:38:34.361317+00:00 [scheduled]>
+2024-03-06 12:38:35,854 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 12:38:35,855 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_4', task_id='get_name', run_id='manual__2024-03-06T07:38:34.361317+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 12:38:35,855 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_4', 'get_name', 'manual__2024-03-06T07:38:34.361317+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:38:35,868 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_4', 'get_name', 'manual__2024-03-06T07:38:34.361317+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:38:38,829 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_4', task_id='get_name', run_id='manual__2024-03-06T07:38:34.361317+00:00', try_number=1, map_index=-1)
+2024-03-06 12:38:38,852 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_4, task_id=get_name, run_id=manual__2024-03-06T07:38:34.361317+00:00, map_index=-1, run_start_date=2024-03-06 07:38:37.911524+00:00, run_end_date=2024-03-06 07:38:38.296051+00:00, run_duration=0.384527, state=success, executor_state=success, try_number=1, max_tries=5, job_id=15, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-03-06 07:38:35.843178+00:00, queued_by_job_id=6, pid=1075
+2024-03-06 12:38:39,031 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_4.greet manual__2024-03-06T07:38:34.361317+00:00 [scheduled]>
+2024-03-06 12:38:39,032 INFO - DAG python_operator_dag_v_4 has 0/16 running and queued tasks
+2024-03-06 12:38:39,033 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_4.greet manual__2024-03-06T07:38:34.361317+00:00 [scheduled]>
+2024-03-06 12:38:39,043 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 12:38:39,044 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_4', task_id='greet', run_id='manual__2024-03-06T07:38:34.361317+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:38:39,045 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_4', 'greet', 'manual__2024-03-06T07:38:34.361317+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:38:39,059 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_4', 'greet', 'manual__2024-03-06T07:38:34.361317+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:38:41,414 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_4', task_id='greet', run_id='manual__2024-03-06T07:38:34.361317+00:00', try_number=1, map_index=-1)
+2024-03-06 12:38:41,437 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_4, task_id=greet, run_id=manual__2024-03-06T07:38:34.361317+00:00, map_index=-1, run_start_date=2024-03-06 07:38:40.573276+00:00, run_end_date=2024-03-06 07:38:40.888049+00:00, run_duration=0.314773, state=success, executor_state=success, try_number=1, max_tries=5, job_id=16, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:38:39.034110+00:00, queued_by_job_id=6, pid=1077
+2024-03-06 12:38:41,851 INFO - Marking run <DagRun python_operator_dag_v_4 @ 2024-03-06 07:38:34.361317+00:00: manual__2024-03-06T07:38:34.361317+00:00, state:running, queued_at: 2024-03-06 07:38:34.436140+00:00. externally triggered: True> successful
+2024-03-06 12:38:41,852 INFO - DagRun Finished: dag_id=python_operator_dag_v_4, execution_date=2024-03-06 07:38:34.361317+00:00, run_id=manual__2024-03-06T07:38:34.361317+00:00, run_start_date=2024-03-06 07:38:35.585368+00:00, run_end_date=2024-03-06 07:38:41.852096+00:00, run_duration=6.266728, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=63c4f8fe1359e23ba6a60a43573d36b3
+2024-03-06 12:39:39,267 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_5.get_name manual__2024-03-06T07:39:38.766386+00:00 [scheduled]>
+2024-03-06 12:39:39,268 INFO - DAG python_operator_dag_v_5 has 0/16 running and queued tasks
+2024-03-06 12:39:39,269 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_5.get_name manual__2024-03-06T07:39:38.766386+00:00 [scheduled]>
+2024-03-06 12:39:39,281 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 12:39:39,282 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_5', task_id='get_name', run_id='manual__2024-03-06T07:39:38.766386+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 12:39:39,283 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_5', 'get_name', 'manual__2024-03-06T07:39:38.766386+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:39:39,299 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_5', 'get_name', 'manual__2024-03-06T07:39:38.766386+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:39:42,300 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_5', task_id='get_name', run_id='manual__2024-03-06T07:39:38.766386+00:00', try_number=1, map_index=-1)
+2024-03-06 12:39:42,327 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_5, task_id=get_name, run_id=manual__2024-03-06T07:39:38.766386+00:00, map_index=-1, run_start_date=2024-03-06 07:39:41.211311+00:00, run_end_date=2024-03-06 07:39:41.718040+00:00, run_duration=0.506729, state=success, executor_state=success, try_number=1, max_tries=5, job_id=17, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-03-06 07:39:39.271139+00:00, queued_by_job_id=6, pid=1094
+2024-03-06 12:39:42,555 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_5.greet manual__2024-03-06T07:39:38.766386+00:00 [scheduled]>
+2024-03-06 12:39:42,556 INFO - DAG python_operator_dag_v_5 has 0/16 running and queued tasks
+2024-03-06 12:39:42,557 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_5.greet manual__2024-03-06T07:39:38.766386+00:00 [scheduled]>
+2024-03-06 12:39:42,571 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 12:39:42,572 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_5', task_id='greet', run_id='manual__2024-03-06T07:39:38.766386+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:39:42,573 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_5', 'greet', 'manual__2024-03-06T07:39:38.766386+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:39:42,590 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_5', 'greet', 'manual__2024-03-06T07:39:38.766386+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:39:44,993 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_5', task_id='greet', run_id='manual__2024-03-06T07:39:38.766386+00:00', try_number=1, map_index=-1)
+2024-03-06 12:39:45,015 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_5, task_id=greet, run_id=manual__2024-03-06T07:39:38.766386+00:00, map_index=-1, run_start_date=2024-03-06 07:39:44.178179+00:00, run_end_date=2024-03-06 07:39:44.531590+00:00, run_duration=0.353411, state=success, executor_state=success, try_number=1, max_tries=5, job_id=18, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:39:42.558781+00:00, queued_by_job_id=6, pid=1096
+2024-03-06 12:39:45,353 INFO - Marking run <DagRun python_operator_dag_v_5 @ 2024-03-06 07:39:38.766386+00:00: manual__2024-03-06T07:39:38.766386+00:00, state:running, queued_at: 2024-03-06 07:39:38.830409+00:00. externally triggered: True> successful
+2024-03-06 12:39:45,354 INFO - DagRun Finished: dag_id=python_operator_dag_v_5, execution_date=2024-03-06 07:39:38.766386+00:00, run_id=manual__2024-03-06T07:39:38.766386+00:00, run_start_date=2024-03-06 07:39:39.146717+00:00, run_end_date=2024-03-06 07:39:45.354745+00:00, run_duration=6.208028, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=859561869979dfd1339044de81b21c91
+2024-03-06 12:40:02,582 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:45:02,826 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:48:52,958 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_6.get_name manual__2024-03-06T07:48:51.903732+00:00 [scheduled]>
+2024-03-06 12:48:52,959 INFO - DAG python_operator_dag_v_6 has 0/16 running and queued tasks
+2024-03-06 12:48:52,960 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_6.get_name manual__2024-03-06T07:48:51.903732+00:00 [scheduled]>
+2024-03-06 12:48:52,971 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 12:48:52,973 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_6', task_id='get_name', run_id='manual__2024-03-06T07:48:51.903732+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 12:48:52,973 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_6', 'get_name', 'manual__2024-03-06T07:48:51.903732+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:48:52,986 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_6', 'get_name', 'manual__2024-03-06T07:48:51.903732+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:48:56,168 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_6', task_id='get_name', run_id='manual__2024-03-06T07:48:51.903732+00:00', try_number=1, map_index=-1)
+2024-03-06 12:48:56,197 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_6, task_id=get_name, run_id=manual__2024-03-06T07:48:51.903732+00:00, map_index=-1, run_start_date=2024-03-06 07:48:55.112125+00:00, run_end_date=2024-03-06 07:48:55.592210+00:00, run_duration=0.480085, state=success, executor_state=success, try_number=1, max_tries=5, job_id=19, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-03-06 07:48:52.962113+00:00, queued_by_job_id=6, pid=1209
+2024-03-06 12:48:56,607 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_6.greet manual__2024-03-06T07:48:51.903732+00:00 [scheduled]>
+2024-03-06 12:48:56,608 INFO - DAG python_operator_dag_v_6 has 0/16 running and queued tasks
+2024-03-06 12:48:56,609 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_6.greet manual__2024-03-06T07:48:51.903732+00:00 [scheduled]>
+2024-03-06 12:48:56,621 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 12:48:56,622 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_6', task_id='greet', run_id='manual__2024-03-06T07:48:51.903732+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:48:56,623 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_6', 'greet', 'manual__2024-03-06T07:48:51.903732+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:48:56,637 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_6', 'greet', 'manual__2024-03-06T07:48:51.903732+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:48:59,170 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_6', task_id='greet', run_id='manual__2024-03-06T07:48:51.903732+00:00', try_number=1, map_index=-1)
+2024-03-06 12:48:59,196 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_6, task_id=greet, run_id=manual__2024-03-06T07:48:51.903732+00:00, map_index=-1, run_start_date=2024-03-06 07:48:58.248648+00:00, run_end_date=2024-03-06 07:48:58.664864+00:00, run_duration=0.416216, state=success, executor_state=success, try_number=1, max_tries=5, job_id=20, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:48:56.610567+00:00, queued_by_job_id=6, pid=1212
+2024-03-06 12:48:59,302 INFO - Marking run <DagRun python_operator_dag_v_6 @ 2024-03-06 07:48:51.903732+00:00: manual__2024-03-06T07:48:51.903732+00:00, state:running, queued_at: 2024-03-06 07:48:51.983445+00:00. externally triggered: True> successful
+2024-03-06 12:48:59,302 INFO - DagRun Finished: dag_id=python_operator_dag_v_6, execution_date=2024-03-06 07:48:51.903732+00:00, run_id=manual__2024-03-06T07:48:51.903732+00:00, run_start_date=2024-03-06 07:48:52.812096+00:00, run_end_date=2024-03-06 07:48:59.302867+00:00, run_duration=6.490771, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=6222850ca1619c2a6a5a4d18adf15111
+2024-03-06 12:50:03,060 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 12:52:52,443 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_7.get_age manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:52,444 INFO - DAG python_operator_dag_v_7 has 0/16 running and queued tasks
+2024-03-06 12:52:52,445 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_7.get_age manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:52,456 WARNING - cannot record scheduled_duration for task get_age because previous state change time has not been saved
+2024-03-06 12:52:52,458 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='get_age', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default
+2024-03-06 12:52:52,459 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'get_age', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:52:52,474 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'get_age', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:52:55,332 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='get_age', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1)
+2024-03-06 12:52:55,359 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_7, task_id=get_age, run_id=manual__2024-03-06T07:52:51.060467+00:00, map_index=-1, run_start_date=2024-03-06 07:52:54.418187+00:00, run_end_date=2024-03-06 07:52:54.769379+00:00, run_duration=0.351192, state=success, executor_state=success, try_number=1, max_tries=5, job_id=21, pool=default_pool, queue=default, priority_weight=3, operator=PythonOperator, queued_dttm=2024-03-06 07:52:52.446879+00:00, queued_by_job_id=6, pid=1268
+2024-03-06 12:52:55,800 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_7.get_name manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:55,801 INFO - DAG python_operator_dag_v_7 has 0/16 running and queued tasks
+2024-03-06 12:52:55,802 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_7.get_name manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:55,813 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 12:52:55,814 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='get_name', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 12:52:55,815 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'get_name', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:52:55,828 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'get_name', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:52:58,345 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='get_name', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1)
+2024-03-06 12:52:58,369 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_7, task_id=get_name, run_id=manual__2024-03-06T07:52:51.060467+00:00, map_index=-1, run_start_date=2024-03-06 07:52:57.383479+00:00, run_end_date=2024-03-06 07:52:57.787806+00:00, run_duration=0.404327, state=success, executor_state=success, try_number=1, max_tries=5, job_id=22, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator, queued_dttm=2024-03-06 07:52:55.803429+00:00, queued_by_job_id=6, pid=1271
+2024-03-06 12:52:58,513 INFO - 1 tasks up for execution:
+	<TaskInstance: python_operator_dag_v_7.greet manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:58,513 INFO - DAG python_operator_dag_v_7 has 0/16 running and queued tasks
+2024-03-06 12:52:58,514 INFO - Setting the following tasks to queued state:
+	<TaskInstance: python_operator_dag_v_7.greet manual__2024-03-06T07:52:51.060467+00:00 [scheduled]>
+2024-03-06 12:52:58,525 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 12:52:58,526 INFO - Sending TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='greet', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 12:52:58,526 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'greet', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:52:58,538 INFO - Executing command: ['airflow', 'tasks', 'run', 'python_operator_dag_v_7', 'greet', 'manual__2024-03-06T07:52:51.060467+00:00', '--local', '--subdir', 'DAGS_FOLDER/python_operator_dag.py']
+2024-03-06 12:53:00,812 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='python_operator_dag_v_7', task_id='greet', run_id='manual__2024-03-06T07:52:51.060467+00:00', try_number=1, map_index=-1)
+2024-03-06 12:53:00,834 INFO - TaskInstance Finished: dag_id=python_operator_dag_v_7, task_id=greet, run_id=manual__2024-03-06T07:52:51.060467+00:00, map_index=-1, run_start_date=2024-03-06 07:53:00.004824+00:00, run_end_date=2024-03-06 07:53:00.359249+00:00, run_duration=0.354425, state=success, executor_state=success, try_number=1, max_tries=5, job_id=23, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-03-06 07:52:58.515817+00:00, queued_by_job_id=6, pid=1273
+2024-03-06 12:53:01,208 INFO - Marking run <DagRun python_operator_dag_v_7 @ 2024-03-06 07:52:51.060467+00:00: manual__2024-03-06T07:52:51.060467+00:00, state:running, queued_at: 2024-03-06 07:52:51.135311+00:00. externally triggered: True> successful
+2024-03-06 12:53:01,209 INFO - DagRun Finished: dag_id=python_operator_dag_v_7, execution_date=2024-03-06 07:52:51.060467+00:00, run_id=manual__2024-03-06T07:52:51.060467+00:00, run_start_date=2024-03-06 07:52:52.230276+00:00, run_end_date=2024-03-06 07:53:01.209350+00:00, run_duration=8.979074, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=f25f43f8617310b42aee9a925960f614
+2024-03-06 12:55:03,472 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:00:03,736 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:05:04,134 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:10:04,785 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:11:04,440 INFO - 2 tasks up for execution:
+	<TaskInstance: task_flow_api_dag_v1.get_name manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+	<TaskInstance: task_flow_api_dag_v1.get_age manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+2024-03-06 13:11:04,441 INFO - DAG task_flow_api_dag_v1 has 0/16 running and queued tasks
+2024-03-06 13:11:04,442 INFO - DAG task_flow_api_dag_v1 has 1/16 running and queued tasks
+2024-03-06 13:11:04,442 INFO - Setting the following tasks to queued state:
+	<TaskInstance: task_flow_api_dag_v1.get_name manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+	<TaskInstance: task_flow_api_dag_v1.get_age manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+2024-03-06 13:11:04,454 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 13:11:04,456 WARNING - cannot record scheduled_duration for task get_age because previous state change time has not been saved
+2024-03-06 13:11:04,457 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='get_name', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 13:11:04,458 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'get_name', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:04,459 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='get_age', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 13:11:04,460 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'get_age', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:04,475 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'get_name', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:07,304 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'get_age', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:09,845 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='get_name', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1)
+2024-03-06 13:11:09,847 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='get_age', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1)
+2024-03-06 13:11:09,873 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v1, task_id=get_age, run_id=manual__2024-03-06T08:11:02.828313+00:00, map_index=-1, run_start_date=2024-03-06 08:11:08.836017+00:00, run_end_date=2024-03-06 08:11:09.278874+00:00, run_duration=0.442857, state=success, executor_state=success, try_number=1, max_tries=5, job_id=25, pool=default_pool, queue=default, priority_weight=2, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:11:04.444062+00:00, queued_by_job_id=6, pid=1468
+2024-03-06 13:11:09,874 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v1, task_id=get_name, run_id=manual__2024-03-06T08:11:02.828313+00:00, map_index=-1, run_start_date=2024-03-06 08:11:06.433667+00:00, run_end_date=2024-03-06 08:11:06.788922+00:00, run_duration=0.355255, state=success, executor_state=success, try_number=1, max_tries=5, job_id=24, pool=default_pool, queue=default, priority_weight=2, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:11:04.444062+00:00, queued_by_job_id=6, pid=1466
+2024-03-06 13:11:10,342 INFO - 1 tasks up for execution:
+	<TaskInstance: task_flow_api_dag_v1.greet manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+2024-03-06 13:11:10,343 INFO - DAG task_flow_api_dag_v1 has 0/16 running and queued tasks
+2024-03-06 13:11:10,343 INFO - Setting the following tasks to queued state:
+	<TaskInstance: task_flow_api_dag_v1.greet manual__2024-03-06T08:11:02.828313+00:00 [scheduled]>
+2024-03-06 13:11:10,354 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 13:11:10,355 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='greet', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 13:11:10,356 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'greet', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:10,372 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v1', 'greet', 'manual__2024-03-06T08:11:02.828313+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:11:12,854 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v1', task_id='greet', run_id='manual__2024-03-06T08:11:02.828313+00:00', try_number=1, map_index=-1)
+2024-03-06 13:11:12,876 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v1, task_id=greet, run_id=manual__2024-03-06T08:11:02.828313+00:00, map_index=-1, run_start_date=2024-03-06 08:11:11.975617+00:00, run_end_date=2024-03-06 08:11:12.364868+00:00, run_duration=0.389251, state=success, executor_state=success, try_number=1, max_tries=5, job_id=26, pool=default_pool, queue=default, priority_weight=1, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:11:10.344919+00:00, queued_by_job_id=6, pid=1471
+2024-03-06 13:11:13,297 INFO - Marking run <DagRun task_flow_api_dag_v1 @ 2024-03-06 08:11:02.828313+00:00: manual__2024-03-06T08:11:02.828313+00:00, state:running, queued_at: 2024-03-06 08:11:02.916119+00:00. externally triggered: True> successful
+2024-03-06 13:11:13,298 INFO - DagRun Finished: dag_id=task_flow_api_dag_v1, execution_date=2024-03-06 08:11:02.828313+00:00, run_id=manual__2024-03-06T08:11:02.828313+00:00, run_start_date=2024-03-06 08:11:04.239339+00:00, run_end_date=2024-03-06 08:11:13.298501+00:00, run_duration=9.059162, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=88840942cd4c03bc2f9f4ca0bcfd0353
+2024-03-06 13:15:05,077 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:20:05,207 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:20:49,789 INFO - 2 tasks up for execution:
+	<TaskInstance: task_flow_api_dag_v2.get_name manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+	<TaskInstance: task_flow_api_dag_v2.get_age manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+2024-03-06 13:20:49,790 INFO - DAG task_flow_api_dag_v2 has 0/16 running and queued tasks
+2024-03-06 13:20:49,791 INFO - DAG task_flow_api_dag_v2 has 1/16 running and queued tasks
+2024-03-06 13:20:49,792 INFO - Setting the following tasks to queued state:
+	<TaskInstance: task_flow_api_dag_v2.get_name manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+	<TaskInstance: task_flow_api_dag_v2.get_age manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+2024-03-06 13:20:49,818 WARNING - cannot record scheduled_duration for task get_name because previous state change time has not been saved
+2024-03-06 13:20:49,819 WARNING - cannot record scheduled_duration for task get_age because previous state change time has not been saved
+2024-03-06 13:20:49,821 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='get_name', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 13:20:49,822 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'get_name', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:49,823 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='get_age', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2024-03-06 13:20:49,824 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'get_age', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:49,842 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'get_name', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:52,860 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'get_age', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:56,028 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='get_name', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1)
+2024-03-06 13:20:56,030 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='get_age', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1)
+2024-03-06 13:20:56,074 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v2, task_id=get_age, run_id=manual__2024-03-06T08:20:48.571810+00:00, map_index=-1, run_start_date=2024-03-06 08:20:54.671993+00:00, run_end_date=2024-03-06 08:20:55.305900+00:00, run_duration=0.633907, state=success, executor_state=success, try_number=1, max_tries=5, job_id=28, pool=default_pool, queue=default, priority_weight=2, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:20:49.794017+00:00, queued_by_job_id=6, pid=1595
+2024-03-06 13:20:56,076 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v2, task_id=get_name, run_id=manual__2024-03-06T08:20:48.571810+00:00, map_index=-1, run_start_date=2024-03-06 08:20:51.834308+00:00, run_end_date=2024-03-06 08:20:52.353147+00:00, run_duration=0.518839, state=success, executor_state=success, try_number=1, max_tries=5, job_id=27, pool=default_pool, queue=default, priority_weight=2, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:20:49.794017+00:00, queued_by_job_id=6, pid=1593
+2024-03-06 13:20:56,351 INFO - 1 tasks up for execution:
+	<TaskInstance: task_flow_api_dag_v2.greet manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+2024-03-06 13:20:56,352 INFO - DAG task_flow_api_dag_v2 has 0/16 running and queued tasks
+2024-03-06 13:20:56,353 INFO - Setting the following tasks to queued state:
+	<TaskInstance: task_flow_api_dag_v2.greet manual__2024-03-06T08:20:48.571810+00:00 [scheduled]>
+2024-03-06 13:20:56,364 WARNING - cannot record scheduled_duration for task greet because previous state change time has not been saved
+2024-03-06 13:20:56,366 INFO - Sending TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='greet', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 13:20:56,367 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'greet', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:56,380 INFO - Executing command: ['airflow', 'tasks', 'run', 'task_flow_api_dag_v2', 'greet', 'manual__2024-03-06T08:20:48.571810+00:00', '--local', '--subdir', 'DAGS_FOLDER/task_flow_api_dag.py']
+2024-03-06 13:20:59,320 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='task_flow_api_dag_v2', task_id='greet', run_id='manual__2024-03-06T08:20:48.571810+00:00', try_number=1, map_index=-1)
+2024-03-06 13:20:59,343 INFO - TaskInstance Finished: dag_id=task_flow_api_dag_v2, task_id=greet, run_id=manual__2024-03-06T08:20:48.571810+00:00, map_index=-1, run_start_date=2024-03-06 08:20:58.396288+00:00, run_end_date=2024-03-06 08:20:58.822315+00:00, run_duration=0.426027, state=success, executor_state=success, try_number=1, max_tries=5, job_id=29, pool=default_pool, queue=default, priority_weight=1, operator=_PythonDecoratedOperator, queued_dttm=2024-03-06 08:20:56.355094+00:00, queued_by_job_id=6, pid=1597
+2024-03-06 13:20:59,440 INFO - Marking run <DagRun task_flow_api_dag_v2 @ 2024-03-06 08:20:48.571810+00:00: manual__2024-03-06T08:20:48.571810+00:00, state:running, queued_at: 2024-03-06 08:20:48.641654+00:00. externally triggered: True> successful
+2024-03-06 13:20:59,441 INFO - DagRun Finished: dag_id=task_flow_api_dag_v2, execution_date=2024-03-06 08:20:48.571810+00:00, run_id=manual__2024-03-06T08:20:48.571810+00:00, run_start_date=2024-03-06 08:20:49.525312+00:00, run_end_date=2024-03-06 08:20:59.441383+00:00, run_duration=9.916071, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=4f1f9976493d6d19272af0f9c878526c
+2024-03-06 13:25:05,476 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:30:05,941 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:35:06,809 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:40:06,847 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:45:07,099 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:50:07,423 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 13:55:07,687 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 14:00:07,942 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 14:05:08,199 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 14:10:08,921 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 15:39:19,749 INFO - Task context logging is enabled
+2024-03-06 15:39:19,751 INFO - Loaded executor: SequentialExecutor
+2024-03-06 15:39:19,819 INFO - Starting the scheduler
+2024-03-06 15:39:19,821 INFO - Processing each file at most -1 times
+2024-03-06 15:39:19,828 INFO - Launched DagFileProcessorManager with pid: 5526
+2024-03-06 15:39:19,831 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 15:39:19,836 INFO - Configured default timezone UTC
+2024-03-06 15:39:19,870 INFO - Marked 1 SchedulerJob instances as failed
+2024-03-06 15:40:17,603 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:40:17,605 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:40:17,607 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:40:17,626 WARNING - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved
+2024-03-06 15:40:17,627 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:40:17,628 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:40:17,647 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:40:21,161 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=1, map_index=-1)
+2024-03-06 15:40:21,197 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:40:20.004195+00:00, run_end_date=2024-03-06 10:40:20.564934+00:00, run_duration=0.560739, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=31, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:40:17.609492+00:00, queued_by_job_id=30, pid=5650
+2024-03-06 15:42:21,115 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:42:21,116 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:42:21,117 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:42:21,129 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:42:21,130 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:42:21,147 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:42:23,662 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=2, map_index=-1)
+2024-03-06 15:42:23,693 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:42:22.701907+00:00, run_end_date=2024-03-06 10:42:23.124277+00:00, run_duration=0.42237, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=32, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:42:21.119109+00:00, queued_by_job_id=30, pid=5852
+2024-03-06 15:44:20,676 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 15:44:23,775 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:44:23,776 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:44:23,777 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:44:23,788 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:44:23,789 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:44:23,802 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:44:26,290 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=3, map_index=-1)
+2024-03-06 15:44:26,319 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:44:25.392893+00:00, run_end_date=2024-03-06 10:44:25.768158+00:00, run_duration=0.375265, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=33, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:44:23.778522+00:00, queued_by_job_id=30, pid=6069
+2024-03-06 15:46:26,527 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:46:26,528 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:46:26,529 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:46:26,541 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:46:26,542 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:46:26,558 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:46:29,101 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=4, map_index=-1)
+2024-03-06 15:46:29,130 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:46:28.189491+00:00, run_end_date=2024-03-06 10:46:28.551056+00:00, run_duration=0.361565, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:46:26.530678+00:00, queued_by_job_id=30, pid=6282
+2024-03-06 15:48:30,403 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:48:30,404 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:48:30,405 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:48:30,421 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:48:30,422 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:48:30,444 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:48:33,632 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=5, map_index=-1)
+2024-03-06 15:48:33,658 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:48:32.515099+00:00, run_end_date=2024-03-06 10:48:32.972842+00:00, run_duration=0.457743, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=35, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:48:30.406305+00:00, queued_by_job_id=30, pid=6510
+2024-03-06 15:49:21,335 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 15:50:33,670 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:50:33,671 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 15:50:33,672 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T10:40:15.407792+00:00 [scheduled]>
+2024-03-06 15:50:33,686 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 15:50:33,688 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:50:33,706 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T10:40:15.407792+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 15:50:36,910 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T10:40:15.407792+00:00', try_number=6, map_index=-1)
+2024-03-06 15:50:36,934 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T10:40:15.407792+00:00, map_index=-1, run_start_date=2024-03-06 10:50:35.756138+00:00, run_end_date=2024-03-06 10:50:36.263202+00:00, run_duration=0.507064, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=36, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 10:50:33.674360+00:00, queued_by_job_id=30, pid=6714
+2024-03-06 15:50:37,599 ERROR - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 10:40:15.407792+00:00: manual__2024-03-06T10:40:15.407792+00:00, state:running, queued_at: 2024-03-06 10:40:15.509467+00:00. externally triggered: True> failed
+2024-03-06 15:50:37,601 INFO - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 10:40:15.407792+00:00, run_id=manual__2024-03-06T10:40:15.407792+00:00, run_start_date=2024-03-06 10:40:17.299288+00:00, run_end_date=2024-03-06 10:50:37.601284+00:00, run_duration=620.301996, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571
+2024-03-06 15:54:21,618 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 15:59:21,971 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:01:02,071 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:01:02,072 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:01:02,074 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:01:02,113 WARNING - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved
+2024-03-06 16:01:02,114 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:01:02,115 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:01:02,133 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:01:05,348 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=1, map_index=-1)
+2024-03-06 16:01:05,377 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:01:04.388737+00:00, run_end_date=2024-03-06 11:01:04.768448+00:00, run_duration=0.379711, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=37, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:01:02.076233+00:00, queued_by_job_id=30, pid=7640
+2024-03-06 16:03:05,113 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:03:05,114 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:03:05,115 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:03:05,127 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:03:05,128 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:03:05,141 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:03:07,668 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=2, map_index=-1)
+2024-03-06 16:03:07,693 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:03:06.725139+00:00, run_end_date=2024-03-06 11:03:07.062358+00:00, run_duration=0.337219, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=38, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:03:05.116558+00:00, queued_by_job_id=30, pid=7781
+2024-03-06 16:04:22,289 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:05:07,555 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:05:07,557 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:05:07,558 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:05:07,569 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:05:07,570 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:05:07,587 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:05:10,018 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=3, map_index=-1)
+2024-03-06 16:05:10,039 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:05:09.113242+00:00, run_end_date=2024-03-06 11:05:09.457490+00:00, run_duration=0.344248, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=39, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:05:07.559644+00:00, queued_by_job_id=30, pid=7924
+2024-03-06 16:07:10,258 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:07:10,259 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:07:10,260 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:07:10,275 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:07:10,276 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:07:10,293 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:07:13,301 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=4, map_index=-1)
+2024-03-06 16:07:13,326 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:07:12.328034+00:00, run_end_date=2024-03-06 11:07:12.717507+00:00, run_duration=0.389473, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=40, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:07:10.262272+00:00, queued_by_job_id=30, pid=8068
+2024-03-06 16:09:12,978 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:09:12,979 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:09:12,980 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:09:13,038 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:09:13,040 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:09:13,061 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:09:16,559 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=5, map_index=-1)
+2024-03-06 16:09:16,586 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:09:15.328734+00:00, run_end_date=2024-03-06 11:09:15.866337+00:00, run_duration=0.537603, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=41, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:09:12.983013+00:00, queued_by_job_id=30, pid=8217
+2024-03-06 16:09:23,136 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:11:16,097 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:11:16,098 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:11:16,099 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:01:00.377611+00:00 [scheduled]>
+2024-03-06 16:11:16,112 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:11:16,112 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:11:16,125 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:01:00.377611+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:11:18,554 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:01:00.377611+00:00', try_number=6, map_index=-1)
+2024-03-06 16:11:18,580 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:01:00.377611+00:00, map_index=-1, run_start_date=2024-03-06 11:11:17.646322+00:00, run_end_date=2024-03-06 11:11:17.991301+00:00, run_duration=0.344979, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=42, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:11:16.101083+00:00, queued_by_job_id=30, pid=8356
+2024-03-06 16:11:18,745 ERROR - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:01:00.377611+00:00: manual__2024-03-06T11:01:00.377611+00:00, state:running, queued_at: 2024-03-06 11:01:00.430566+00:00. externally triggered: True> failed
+2024-03-06 16:11:18,746 INFO - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:01:00.377611+00:00, run_id=manual__2024-03-06T11:01:00.377611+00:00, run_start_date=2024-03-06 11:01:01.935114+00:00, run_end_date=2024-03-06 11:11:18.746556+00:00, run_duration=616.811442, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571
+2024-03-06 16:14:23,296 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:19:12,450 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:19:12,451 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:19:12,452 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:19:12,465 WARNING - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved
+2024-03-06 16:19:12,467 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:19:12,468 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:19:12,484 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:19:15,724 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=1, map_index=-1)
+2024-03-06 16:19:15,751 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:19:14.583368+00:00, run_end_date=2024-03-06 11:19:15.123825+00:00, run_duration=0.540457, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=43, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:19:12.453754+00:00, queued_by_job_id=30, pid=8907
+2024-03-06 16:19:23,631 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:21:15,602 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:21:15,603 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:21:15,604 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:21:15,615 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:21:15,616 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:21:15,629 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:21:18,141 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=2, map_index=-1)
+2024-03-06 16:21:18,167 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:21:17.246996+00:00, run_end_date=2024-03-06 11:21:17.611040+00:00, run_duration=0.364044, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=44, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:21:15.605660+00:00, queued_by_job_id=30, pid=9047
+2024-03-06 16:23:17,928 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:23:17,929 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:23:17,930 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:23:17,943 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:23:17,943 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:23:17,956 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:23:20,491 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=3, map_index=-1)
+2024-03-06 16:23:20,517 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:23:19.529074+00:00, run_end_date=2024-03-06 11:23:19.898059+00:00, run_duration=0.368985, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=45, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:23:17.932055+00:00, queued_by_job_id=30, pid=9195
+2024-03-06 16:24:24,011 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:25:21,264 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:25:21,265 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:25:21,266 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:25:21,277 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:25:21,278 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:25:21,291 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:25:23,778 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=4, map_index=-1)
+2024-03-06 16:25:23,804 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:25:22.854503+00:00, run_end_date=2024-03-06 11:25:23.202979+00:00, run_duration=0.348476, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=46, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:25:21.267456+00:00, queued_by_job_id=30, pid=9335
+2024-03-06 16:27:23,324 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:27:23,325 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:27:23,326 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:27:23,336 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:27:23,337 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:27:23,352 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:27:25,904 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=5, map_index=-1)
+2024-03-06 16:27:25,930 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:27:24.974454+00:00, run_end_date=2024-03-06 11:27:25.327812+00:00, run_duration=0.353358, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=47, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:27:23.327499+00:00, queued_by_job_id=30, pid=9477
+2024-03-06 16:29:24,455 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:29:25,741 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:29:25,742 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:29:25,744 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:29:25,760 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=6, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:29:25,762 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:29:25,779 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:29:28,499 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=6, map_index=-1)
+2024-03-06 16:29:28,526 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:29:27.518580+00:00, run_end_date=2024-03-06 11:29:27.881605+00:00, run_duration=0.363025, state=failed, executor_state=success, try_number=6, max_tries=5, job_id=48, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:29:25.745817+00:00, queued_by_job_id=30, pid=9634
+2024-03-06 16:29:28,703 ERROR - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:19:10.805645+00:00: manual__2024-03-06T11:19:10.805645+00:00, state:running, queued_at: 2024-03-06 11:19:10.848923+00:00. externally triggered: True> failed
+2024-03-06 16:29:28,704 INFO - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:19:10.805645+00:00, run_id=manual__2024-03-06T11:19:10.805645+00:00, run_start_date=2024-03-06 11:19:12.185767+00:00, run_end_date=2024-03-06 11:29:28.704558+00:00, run_duration=616.518791, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571
+2024-03-06 16:31:05,925 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:31:05,926 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:31:05,927 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:31:05,941 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=7, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:31:05,942 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:31:05,955 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:31:08,698 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=7, map_index=-1)
+2024-03-06 16:31:08,723 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:31:07.688300+00:00, run_end_date=2024-03-06 11:31:08.073983+00:00, run_duration=0.385683, state=up_for_retry, executor_state=success, try_number=7, max_tries=11, job_id=49, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:31:05.928661+00:00, queued_by_job_id=30, pid=9753
+2024-03-06 16:33:08,551 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:33:08,553 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:33:08,554 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:33:08,565 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=8, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:33:08,566 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:33:08,578 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:33:11,121 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=8, map_index=-1)
+2024-03-06 16:33:11,143 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:33:10.113160+00:00, run_end_date=2024-03-06 11:33:10.471850+00:00, run_duration=0.35869, state=up_for_retry, executor_state=success, try_number=8, max_tries=11, job_id=50, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:33:08.555513+00:00, queued_by_job_id=30, pid=9900
+2024-03-06 16:34:25,221 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:35:11,412 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:35:11,414 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:35:11,415 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:35:11,432 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=9, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:35:11,434 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:35:11,451 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:35:14,736 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=9, map_index=-1)
+2024-03-06 16:35:14,798 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:35:13.552095+00:00, run_end_date=2024-03-06 11:35:13.949206+00:00, run_duration=0.397111, state=up_for_retry, executor_state=success, try_number=9, max_tries=11, job_id=51, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:35:11.417437+00:00, queued_by_job_id=30, pid=10047
+2024-03-06 16:37:14,457 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:37:14,458 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:37:14,459 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:37:14,472 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=10, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:37:14,473 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:37:14,489 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:37:17,377 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=10, map_index=-1)
+2024-03-06 16:37:17,404 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:37:16.303496+00:00, run_end_date=2024-03-06 11:37:16.749407+00:00, run_duration=0.445911, state=up_for_retry, executor_state=success, try_number=10, max_tries=11, job_id=52, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:37:14.461177+00:00, queued_by_job_id=30, pid=10185
+2024-03-06 16:39:17,335 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:39:17,337 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:39:17,337 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:39:17,350 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=11, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:39:17,351 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:39:17,363 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:39:19,885 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=11, map_index=-1)
+2024-03-06 16:39:19,910 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:39:18.983869+00:00, run_end_date=2024-03-06 11:39:19.345096+00:00, run_duration=0.361227, state=up_for_retry, executor_state=success, try_number=11, max_tries=11, job_id=53, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:39:17.339191+00:00, queued_by_job_id=30, pid=10323
+2024-03-06 16:39:25,591 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:41:20,137 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:41:20,138 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:41:20,139 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:19:10.805645+00:00 [scheduled]>
+2024-03-06 16:41:20,150 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=12, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:41:20,151 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:41:20,168 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:19:10.805645+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:41:22,700 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:19:10.805645+00:00', try_number=12, map_index=-1)
+2024-03-06 16:41:22,725 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:19:10.805645+00:00, map_index=-1, run_start_date=2024-03-06 11:41:21.768759+00:00, run_end_date=2024-03-06 11:41:22.125597+00:00, run_duration=0.356838, state=failed, executor_state=success, try_number=12, max_tries=11, job_id=54, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:41:20.140349+00:00, queued_by_job_id=30, pid=10466
+2024-03-06 16:41:22,888 ERROR - Marking run <DagRun postgres_operator_dag_v_1 @ 2024-03-06 11:19:10.805645+00:00: manual__2024-03-06T11:19:10.805645+00:00, state:running, queued_at: 2024-03-06 11:31:04.866074+00:00. externally triggered: True> failed
+2024-03-06 16:41:22,889 INFO - DagRun Finished: dag_id=postgres_operator_dag_v_1, execution_date=2024-03-06 11:19:10.805645+00:00, run_id=manual__2024-03-06T11:19:10.805645+00:00, run_start_date=2024-03-06 11:31:05.811645+00:00, run_end_date=2024-03-06 11:41:22.889061+00:00, run_duration=617.077416, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-03-05 00:00:00+00:00, data_interval_end=2024-03-06 00:00:00+00:00, dag_hash=e2beb33dcb504b0aa36e6c8a3dacc571
+2024-03-06 16:44:25,906 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:49:26,215 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:52:01,418 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:52:01,420 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:52:01,421 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:52:01,443 WARNING - cannot record scheduled_duration for task create_table_user because previous state change time has not been saved
+2024-03-06 16:52:01,445 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:52:01,447 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:52:01,469 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:52:04,532 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=1, map_index=-1)
+2024-03-06 16:52:04,560 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:52:03.589665+00:00, run_end_date=2024-03-06 11:52:03.994490+00:00, run_duration=0.404825, state=up_for_retry, executor_state=success, try_number=1, max_tries=5, job_id=55, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:52:01.423889+00:00, queued_by_job_id=30, pid=11208
+2024-03-06 16:54:04,749 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:54:04,751 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:54:04,751 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:54:04,761 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:54:04,762 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:54:04,776 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:54:07,291 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=2, map_index=-1)
+2024-03-06 16:54:07,316 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:54:06.390078+00:00, run_end_date=2024-03-06 11:54:06.743152+00:00, run_duration=0.353074, state=up_for_retry, executor_state=success, try_number=2, max_tries=5, job_id=56, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:54:04.752876+00:00, queued_by_job_id=30, pid=11356
+2024-03-06 16:54:26,617 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 16:56:07,802 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:56:07,803 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:56:07,804 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:56:07,818 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=3, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:56:07,819 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:56:07,834 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:56:10,549 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=3, map_index=-1)
+2024-03-06 16:56:10,578 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:56:09.573757+00:00, run_end_date=2024-03-06 11:56:09.936207+00:00, run_duration=0.36245, state=up_for_retry, executor_state=success, try_number=3, max_tries=5, job_id=57, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:56:07.806595+00:00, queued_by_job_id=30, pid=11494
+2024-03-06 16:58:10,146 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:58:10,148 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 16:58:10,149 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 16:58:10,163 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=4, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 16:58:10,164 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:58:10,181 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 16:58:13,451 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=4, map_index=-1)
+2024-03-06 16:58:13,475 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 11:58:12.206768+00:00, run_end_date=2024-03-06 11:58:12.735510+00:00, run_duration=0.528742, state=up_for_retry, executor_state=success, try_number=4, max_tries=5, job_id=58, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 11:58:10.150763+00:00, queued_by_job_id=30, pid=11628
+2024-03-06 16:59:27,332 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-03-06 17:00:13,359 INFO - 1 tasks up for execution:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 17:00:13,359 INFO - DAG postgres_operator_dag_v_1 has 0/16 running and queued tasks
+2024-03-06 17:00:13,360 INFO - Setting the following tasks to queued state:
+	<TaskInstance: postgres_operator_dag_v_1.create_table_user manual__2024-03-06T11:51:59.569526+00:00 [scheduled]>
+2024-03-06 17:00:13,370 INFO - Sending TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=5, map_index=-1) to executor with priority 1 and queue default
+2024-03-06 17:00:13,371 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 17:00:13,383 INFO - Executing command: ['airflow', 'tasks', 'run', 'postgres_operator_dag_v_1', 'create_table_user', 'manual__2024-03-06T11:51:59.569526+00:00', '--local', '--subdir', 'DAGS_FOLDER/postgres_operator_dag.py']
+2024-03-06 17:00:15,826 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='postgres_operator_dag_v_1', task_id='create_table_user', run_id='manual__2024-03-06T11:51:59.569526+00:00', try_number=5, map_index=-1)
+2024-03-06 17:00:15,852 INFO - TaskInstance Finished: dag_id=postgres_operator_dag_v_1, task_id=create_table_user, run_id=manual__2024-03-06T11:51:59.569526+00:00, map_index=-1, run_start_date=2024-03-06 12:00:14.876909+00:00, run_end_date=2024-03-06 12:00:15.261374+00:00, run_duration=0.384465, state=up_for_retry, executor_state=success, try_number=5, max_tries=5, job_id=59, pool=default_pool, queue=default, priority_weight=1, operator=PostgresOperator, queued_dttm=2024-03-06 12:00:13.361716+00:00, queued_by_job_id=30, pid=11764
